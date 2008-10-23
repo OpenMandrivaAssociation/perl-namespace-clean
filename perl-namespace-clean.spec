@@ -1,5 +1,5 @@
 %define module   namespace-clean
-%define version    0.08
+%define version    0.09
 %define release    %mkrel 1
 
 Name:       perl-%{module}
@@ -14,6 +14,7 @@ BuildRequires: perl(FindBin)
 BuildRequires: perl(Scope::Guard)
 BuildRequires: perl(Symbol)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(B::Hooks::EndOfScope)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
