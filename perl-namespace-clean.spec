@@ -1,6 +1,6 @@
 %define module   namespace-clean
 %define version    0.09
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -17,6 +17,7 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(B::Hooks::EndOfScope)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
+Provides:   perl(namespace::clean)
 
 %description
 When you define a function, or import one, into a Perl package, it will
