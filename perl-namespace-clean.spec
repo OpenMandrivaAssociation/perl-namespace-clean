@@ -1,6 +1,6 @@
 %define module   namespace-clean
-%define version    0.09
-%define release    %mkrel 2
+%define version    0.10
+%define release    %mkrel 1
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -35,7 +35,7 @@ name, but they won't show up as methods on your class or instances.
 %setup -q -n %{module}-%{version} 
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
 %make
 
 %check
