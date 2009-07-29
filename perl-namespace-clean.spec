@@ -1,22 +1,23 @@
-%define module   namespace-clean
-%define version    0.11
-%define release    %mkrel 1
+%define upstream_name    namespace-clean
+%define upstream_version 0.11
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Keep imports and functions out of your namespace
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/namespace/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/namespace/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(FindBin)
 BuildRequires: perl(Scope::Guard)
 BuildRequires: perl(Symbol)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(B::Hooks::EndOfScope)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 Provides:   perl(namespace::clean)
 
 %description
@@ -32,7 +33,7 @@ Functions called in the package itself will still be bound by their
 name, but they won't show up as methods on your class or instances.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
@@ -53,4 +54,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
