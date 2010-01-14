@@ -11,13 +11,17 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/namespace/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(B::Hooks::EndOfScope)
 BuildRequires: perl(FindBin)
 BuildRequires: perl(Scope::Guard)
+BuildRequires: perl(Sub::Identify)
+BuildRequires: perl(Sub::Name)
 BuildRequires: perl(Symbol)
 BuildRequires: perl(Test::More)
-BuildRequires: perl(B::Hooks::EndOfScope)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+
 Provides:   perl(namespace::clean)
 
 %description
@@ -40,7 +44,7 @@ name, but they won't show up as methods on your class or instances.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
