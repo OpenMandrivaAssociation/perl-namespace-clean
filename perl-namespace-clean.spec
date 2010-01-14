@@ -1,5 +1,5 @@
 %define upstream_name    namespace-clean
-%define upstream_version 0.11
+%define upstream_version 0.12
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
