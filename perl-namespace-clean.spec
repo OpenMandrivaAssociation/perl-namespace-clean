@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/namespace/%{upstream_name}-%{u
 
 BuildRequires: perl(B::Hooks::EndOfScope)
 BuildRequires: perl(FindBin)
+BuildRequires: perl(Package::Stash)
 BuildRequires: perl(Scope::Guard)
 BuildRequires: perl(Sub::Identify)
 BuildRequires: perl(Sub::Name)
