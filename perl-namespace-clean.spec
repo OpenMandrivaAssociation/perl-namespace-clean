@@ -1,5 +1,5 @@
 %define upstream_name    namespace-clean
-%define upstream_version 0.23
+%define upstream_version 0.24
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/namespace/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/namespace/namespace-clean-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(B::Hooks::EndOfScope)
 BuildRequires:	perl(FindBin)
@@ -111,3 +111,4 @@ name, but they won't show up as methods on your class or instances.
 
 * Wed Jul 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.0
 - initial mdv release, generated with cpan2dist
+

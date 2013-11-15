@@ -1,2 +1,4 @@
+removed_sources:
+  namespace-clean-0.23.tar.gz: 6f29fe96232cb87dd18b90eac3d8ee6ac82ee411
 sources:
-  "namespace-clean-0.23.tar.gz": 6f29fe96232cb87dd18b90eac3d8ee6ac82ee411
+  namespace-clean-0.24.tar.gz: 6fd1541dee6e0b3a52f86dbdbc7fabd4f175a087
