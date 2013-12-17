@@ -112,3 +112,4 @@ name, but they won't show up as methods on your class or instances.
 * Wed Jul 16 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2009.0
 - initial mdv release, generated with cpan2dist
 
+
