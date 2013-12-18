@@ -19,6 +19,7 @@ BuildRequires:	perl(Sub::Identify)
 BuildRequires:	perl(Sub::Name)
 BuildRequires:	perl(Symbol)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Module::Implementation)
 BuildRequires:	perl-devel
 
 BuildArch:	noarch
