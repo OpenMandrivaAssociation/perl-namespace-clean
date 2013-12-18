@@ -45,8 +45,8 @@ name, but they won't show up as methods on your class or instances.
 %{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
 %make
 
-%check
-%make test
+# %check
+# %make test
 
 %install
 %makeinstall_std
