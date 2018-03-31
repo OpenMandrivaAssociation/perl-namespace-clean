@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
@@ -25,6 +25,7 @@ BuildRequires:	perl-devel
 BuildArch:	noarch
 
 Provides:	perl(namespace::clean)
+Provides:	perl(namespace::clean::_Util)
 
 %description
 When you define a function, or import one, into a Perl package, it will
