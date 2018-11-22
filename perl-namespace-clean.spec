@@ -3,12 +3,12 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	6
 
 Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		http://metacpan.org/pod/namespace::clean
 Source0:	http://www.cpan.org/modules/by-module/namespace/namespace-clean-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(B::Hooks::EndOfScope)
