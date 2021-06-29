@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	8
 
 Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
@@ -41,7 +41,7 @@ Functions called in the package itself will still be bound by their
 name, but they won't show up as methods on your class or instances.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
