@@ -8,7 +8,7 @@ Release:	11
 Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/namespace::clean
+Url:		https://metacpan.org/pod/namespace::clean
 Source0:	http://www.cpan.org/modules/by-module/namespace/namespace-clean-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(B::Hooks::EndOfScope)
