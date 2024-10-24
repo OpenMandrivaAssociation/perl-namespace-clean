@@ -1,15 +1,14 @@
 %define upstream_name    namespace-clean
-%define upstream_version 0.27
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	12
+Version:	0.27
+Release:	1
 
 Summary:	Keep imports and functions out of your namespace
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/namespace::clean
-Source0:	http://www.cpan.org/modules/by-module/namespace/namespace-clean-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/namespace/namespace-clean-%{version}.tar.gz
 
 BuildRequires:	perl(B::Hooks::EndOfScope)
 BuildRequires:	perl(FindBin)
@@ -41,17 +40,17 @@ Functions called in the package itself will still be bound by their
 name, but they won't show up as methods on your class or instances.
 
 %prep
-%autosetup -p1 -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor --skipdeps
-%make
+%make_build
 
 # %check
 # %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes
